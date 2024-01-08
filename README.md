@@ -1,0 +1,11 @@
+To reproduce:
+    - Create "data" folder with following:
+        - all the data files included by Kaggle
+        - "play_by_play_2022.parquet" from nflfastR (https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2022.parquet)
+    - Create virtual environment (`python -m venv .venv`)
+    - Activate and install dependencies (`source .venv/bin/activate` on Linux/Mac or `.venv\Scripts\activate` on Windows -> `pip install -r requirements.txt`)
+    - `python process_data.py`
+    - `python create_train_x.py`
+    - `python train_model.py`
+    - Run `calculate_xyac_epa.R`
+    - Visualizations in `xyac_visualization`; can do analysis within there as well
